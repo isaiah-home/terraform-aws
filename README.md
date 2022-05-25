@@ -10,3 +10,4 @@ Terraform for aws resources
 ## Notes
  * Uses variables defined in the ```env.sh``` script setup in the ```init``` repo.
  * Uses aws paramiters defined in the ```init``` repo.
+ * Uses a backet (not setup through this terraform) to save this terraform's state file
