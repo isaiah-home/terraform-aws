@@ -41,3 +41,11 @@ resource "aws_route53_record" "snipe_it" {
   ttl     = "300"
   records = ["${var.domain}"]
 }
+
+resource "aws_route53_record" "vaultwarden" {
+  zone_id = data.aws_route53_zone.primary.zone_id
+  name    = "vaultwarden"
+  type    = "CNAME"
+  ttl     = "300"
+  records = ["${var.domain}"]
+}
