@@ -1,5 +1,7 @@
 # terraform-aws
-Terraform for aws resources
+Terraform for aws resources. This is to maintain resources within the "organize-me" space.
+
+Some setup needs to happen in aws by an adminitrator prior this. For example, setting up the aws user, env paramiters, an s3 bucket for terraform. See the init repo.
 
 # Terraform Init
 The terraform state file location cannot use variables. The bucket location must be set when initializing the terraform. This bucket should exist prior to initializing.
