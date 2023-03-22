@@ -11,8 +11,7 @@ terraform init -backend-config="bucket=organize-me.${DOMAIN}.terraform" -backend
 
 # AWS Services
  * Route 53 (DNS setup. Assumes the domain is managed in aws)
- * S3
-   - Bucket for backups
+ * S3 (Bucket for backups)
 
 ## Notes
  * Uses variables defined in the ```env.sh``` script setup in the ```init``` repo.
