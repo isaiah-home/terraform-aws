@@ -49,3 +49,11 @@ resource "aws_route53_record" "vaultwarden" {
   ttl     = "300"
   records = ["${var.domain}"]
 }
+
+resource "aws_route53_record" "pihole" {
+  zone_id = data.aws_route53_zone.primary.zone_id
+  name    = "pihole"
+  type    = "CNAME"
+  ttl     = "300"
+  records = ["${var.domain}"]
+}
