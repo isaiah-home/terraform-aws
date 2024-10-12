@@ -57,3 +57,19 @@ resource "aws_route53_record" "pihole" {
   ttl     = "300"
   records = ["${var.domain}"]
 }
+
+resource "aws_route53_record" "homeassistant" {
+  zone_id = data.aws_route53_zone.primary.zone_id
+  name    = "homeassistant"
+  type    = "CNAME"
+  ttl     = "300"
+  records = ["${var.domain}"]
+}
+
+resource "aws_route53_record" "goaccess" {
+  zone_id = data.aws_route53_zone.primary.zone_id
+  name    = "goaccess"
+  type    = "CNAME"
+  ttl     = "300"
+  records = ["${var.domain}"]
+}
